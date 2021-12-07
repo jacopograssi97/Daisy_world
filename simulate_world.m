@@ -59,6 +59,7 @@ function [T_e, area_b, area_w, area_g, albedo_p] = simulate_world( ...
         grid on
         set(gca,'box','off')
         set(gca,'FontSize',12,'FontName','Calibri');
+        ylim([0 50])
 
         nexttile
         plot(t,area_b,'DisplayName','Black')

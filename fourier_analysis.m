@@ -18,7 +18,7 @@ function[l_f,T_e_f, area_b_f, area_w_f, area_g_f, albedo_p_f, frec] = fourier_an
         
         nexttile
         plot(1./frec,l_f)
-        ylabel('R_i [W/m^2]')
+        ylabel('R_i')
         set(gca,'xticklabel',{[]})
         grid on
         set(gca,'box','off')
@@ -27,7 +27,7 @@ function[l_f,T_e_f, area_b_f, area_w_f, area_g_f, albedo_p_f, frec] = fourier_an
 
         nexttile
         plot(1./frec,T_e_f)
-        ylabel('T_e [°C]')
+        ylabel('T_e')
         set(gca,'xticklabel',{[]})
         grid on
         set(gca,'box','off')
