@@ -42,8 +42,7 @@ function [T_e, area_b, area_w, area_g, albedo_p] = simulate_world( ...
         m = tiledlayout(4,1);
         m.Padding = 'tight';
         m.TileSpacing = 'tight';
-        
-        title(m,'Simulazione dello scenario')
+
 
         nexttile
         plot(t,S_0*l)

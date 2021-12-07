@@ -16,8 +16,6 @@ function[l_f,T_e_f, area_b_f, area_w_f, area_g_f, albedo_p_f, frec] = fourier_an
         m1.Padding = 'tight';
         m1.TileSpacing = 'tight';
         
-        title(m1,'Analisi di fourier')
-
         nexttile
         plot(1./frec,l_f)
         ylabel('R_i [W/m^2]')
