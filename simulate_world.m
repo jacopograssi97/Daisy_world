@@ -1,13 +1,15 @@
 % Returns vectors with world evolution 
 function [T_e, area_b, area_w, area_g, albedo_p] = simulate_world( ...
     ... % Incoming radiation properties
-    S_0, l, ... 
+    t, S_0, l, ... 
     ... % Albedoes
     a_b, a_w, a_g, ...
     ... % Initial areas
     area_b_ini, area_w_ini, ...
     ... % Constants
-    q, mu, p, f, sigma)
+    q, mu, p, f, sigma,...
+    ... % Plot
+    plt)
 
     T_e = zeros(length(l),1);
     area_g = zeros(length(l),1);
@@ -33,6 +35,52 @@ function [T_e, area_b, area_w, area_g, albedo_p] = simulate_world( ...
         l(i));
     end
 
+    if plt == 1
+        F1 = figure;
+        F1.Position = [90 90 600 700];
+
+        m = tiledlayout(4,1);
+        m.Padding = 'tight';
+        m.TileSpacing = 'tight';
+        
+        title(m,'Simulazione dello scenario')
+
+        nexttile
+        plot(t,S_0*l)
+        ylabel('R_i [W/m^2]')
+        set(gca,'xticklabel',{[]})
+        grid on
+        set(gca,'box','off')
+        set(gca,'FontSize',12,'FontName','Calibri');
+
+        nexttile
+        plot(t,T_e)
+        ylabel('T_e [°C]')
+        set(gca,'xticklabel',{[]})
+        grid on
+        set(gca,'box','off')
+        set(gca,'FontSize',12,'FontName','Calibri');
+
+        nexttile
+        plot(t,area_b,'DisplayName','Black')
+        hold on
+        plot(t,area_w,'DisplayName','White')
+        ylabel('Area')
+        set(gca,'xticklabel',{[]})
+        grid on
+        legend
+        set(gca,'box','off')
+        set(gca,'FontSize',12,'FontName','Calibri');
+
+        nexttile
+        plot(t,albedo_p)
+        xlabel('Steps')
+        grid on
+        ylabel('Total albedo')
+        set(gca,'box','off')
+        set(gca,'FontSize',12,'FontName','Calibri');
+        hold off
+    end
 end
 
 % Returns values at step n 
