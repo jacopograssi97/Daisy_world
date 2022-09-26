@@ -1,2 +1,2 @@
 # Daisy World 
-A simple matlab livescript for simulating daisy world.
+A simple MATLAB livescript to simulate Daisyworld.
