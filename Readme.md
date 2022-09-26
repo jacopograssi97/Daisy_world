@@ -6,4 +6,4 @@ A simple MATLAB livescript to simulate Daisyworld.
 - [Theoretical equation]
 
 ## Daisyworld introduction
-Daisyworld is a fictional planet orbiting a star. This planet is populated by black and white daisy
+Daisyworld is a fictional planet orbiting a star. This planet is populated by black and white daisies. Each type as a different albedo, a different local temperture and grows better in different conditions.
