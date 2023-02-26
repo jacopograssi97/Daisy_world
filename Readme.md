@@ -1,5 +1,5 @@
 # Daisy World 
-A simple MATLAB livescript to simulate Daisyworld.
+A MATLAB livescript for Daisyworld, a simple model which simlulate the interation between living organisms and their inorganic surroundings on Earth.
 
 ## Table of contents
 - [Daisyworld introduction](#daisyworld-introduction)
